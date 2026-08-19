@@ -17,7 +17,7 @@ export default function GuideContent({
           {/* ── HERO ── */}
           <section className="rg-hero rg-section">
             <FadeUp>
-              <h1><span className="rg-gold">IT</span> Job Seekers 🇦🇺<span style={{display: 'none'}}>[cite: 1]</span></h1>
+              <h1><span className="rg-gold">Logistics</span> Job Seekers 🇦🇺<span style={{display: 'none'}}>[cite: 1]</span></h1>
               <p className="rg-hero-sub">Not Much Aussie Experience? Try This!</p>
               <div className="rg-hero-divider" />
               <div className="rg-visa-badge">If you have 485, 189, 190, 500, 491, 191, 482, 186 Visa<span style={{display: 'none'}}>[cite: 1]</span></div>
@@ -28,7 +28,7 @@ export default function GuideContent({
           <section className="rg-section">
             <FadeUp>
               <p className="rg-p" style={{ fontSize: 28, fontWeight: 500, marginBottom: 40 }}>Hey, It’s Methsara here from DreamShift :)<span style={{display: 'none'}}>[cite: 2]</span></p>
-              <p className="rg-p">Since you are looking for IT Jobs, we gathered as many resources as possible to help your job search! Here’s Something you need to know:<span style={{display: 'none'}}>[cite: 2, 3]</span></p>
+              <p className="rg-p">Since you are looking for Logistics Jobs, we gathered as many resources as possible to help your job search! Here’s Something you need to know:<span style={{display: 'none'}}>[cite: 2, 3]</span></p>
               <p className="rg-p">Let’s think you are applying for 100 Jobs on LinkedIn & Seek: Unfortunately, around <span className="rg-accent-red">65%</span> of the jobs you apply will get rejected.<span style={{display: 'none'}}>[cite: 3]</span></p>
               
               <div className="rg-callout">
@@ -231,8 +231,8 @@ export default function GuideContent({
             <FadeUp>
               <Sparkles size={56} className="rg-cta-icon" />
               <p className="rg-num" style={{ marginBottom: 28 }}>Before You Go</p>
-              <h2>We have created a 3 Way Job Search Strategy!</h2>
-              <p className="rg-p rg-cta-desc">By working with 200+ job seekers in Australia, we created a step-by-step guide on 3 strategies people use to land interviews faster. Drop your email and we&apos;ll send it to you for totally free!</p>
+              <h2>Apply for 50 Jobs in just 10h!<br></br>Want to know how?</h2>
+              <p className="rg-p rg-cta-desc">After helping 200+ Aussie Migrants to land job interviews we have created this strategy!</p>
 
               <form className="rg-form" onSubmit={handleLeadSubmit}>
                 <div className="rg-form-row">
@@ -240,7 +240,7 @@ export default function GuideContent({
                   <input className="rg-input" type="email" name="email" placeholder="Email" aria-label="Email" value={leadForm.email} onChange={handleLeadChange} required />
                 </div>
                 <button className="rg-cta-btn" type="submit" disabled={leadStatus === "submitting"}>
-                  {leadStatus === "submitting" ? "Sending..." : "Send Me the Guide"}
+                  {leadStatus === "submitting" ? "Sending..." : "Get It For Free"}
                   <ChevronRight size={20} />
                 </button>
                 {leadStatus === "success" ? <p className="rg-p" style={{ marginTop: 8, color: "var(--gold)" }}>Thanks. We&apos;ll send the guide shortly.</p> : null}

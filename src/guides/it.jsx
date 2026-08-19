@@ -61,7 +61,7 @@ export default function GuideContent({
                   <span className="rg-step-num">Step 02</span>
                   <div className="rg-step-body">
                     Once you’ve shared those details, use this prompt:<span style={{display: 'none'}}>[cite: 9]</span>
-                    <blockquote>“Suggest me project ideas that I can do online, which will help me land a job in the specific location and job titles I mentioned earlier.”<span style={{display: 'none'}}>[cite: 10]</span></blockquote>
+                    <blockquote>“Suggest me online passion project ideas I can do to build my portfolio as a [your role] targeting jobs in [your city/state], Australia. The projects should show I understand Australian standards, local conditions and industry practices.”<span style={{display: 'none'}}>[cite: 10]</span></blockquote>
                   </div>
                 </div>
                 <div className="rg-step">
@@ -95,7 +95,7 @@ export default function GuideContent({
                 </div>
                 <div className="rg-video-col">
                   <a href="https://lu.ma" target="_blank" rel="noreferrer" className="rg-video-label" style={{textDecoration: 'none', color: 'inherit'}}>Luma Events<span style={{display: 'none'}}>[cite: 16]</span></a>
-                  <VideoEmbed src="https://player.vimeo.com/video/1190465027?badge=0&autopause=0&player_id=0&app_id=58479" title="Luma Events" />
+                  <VideoEmbed src="https://player.vimeo.com/video/1219123575?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479%22" title="Luma Events" />
                 </div>
               </div>
 
@@ -132,8 +132,10 @@ export default function GuideContent({
                 <div className="rg-option active">
                   <span className="rg-option-num">3</span>
                   <div>
-                    <p className="rg-p" style={{ marginBottom: 12, opacity: 0.8 }}>Or 3rd option - which is the best:<span style={{display: 'none'}}>[cite: 20]</span></p>
-                    <p className="rg-p"><strong>Do Courses from Coursera but offered by Australian Universities</strong><span style={{display: 'none'}}>[cite: 20]</span> <br/><span className="rg-accent" style={{ display: 'inline-block', marginTop: 8 }}>We recommend Macquarie University (Sydney)</span><span style={{display: 'none'}}>[cite: 20]</span></p>
+                    <p className="rg-p" style={{ marginBottom: 12, opacity: 0.8 }}>Best Option - Coursera<span style={{display: 'none'}}>[cite: 20]</span></p>
+                    <p className="rg-p"><strong>Courses from Aussie Universities</strong><span style={{display: 'none'}}>[cite: 20]</span> <br/><span className="rg-accent" style={{ display: 'inline-block', marginTop: 8 }}>For 25 USD monthly subscription you can do 10,000+ courses</span><span style={{display: 'none'}}>[cite: 20]</span></p>
+                    <p className="rg-video-label" style={{ marginTop: 64 }}>Why Coursera</p>
+                    <VideoEmbed src="https://player.vimeo.com/video/1219123853?badge=0&autopause=0&;player_id=0&;app_id=58479" title="Coursera - Best Website to find Australian Online Courses for an affordable price" />
                   </div>
                 </div>
               </div>
@@ -231,8 +233,8 @@ export default function GuideContent({
             <FadeUp>
               <Sparkles size={56} className="rg-cta-icon" />
               <p className="rg-num" style={{ marginBottom: 28 }}>Before You Go</p>
-              <h2>We have created a 3 Way Job Search Strategy!</h2>
-              <p className="rg-p rg-cta-desc">By working with 200+ job seekers in Australia, we created a step-by-step guide on 3 strategies people use to land interviews faster. Drop your email and we&apos;ll send it to you for totally free!</p>
+              <h2>Apply for 50 Jobs in just 10h!<br></br>Want to know how?</h2>
+              <p className="rg-p rg-cta-desc">After helping 200+ Aussie Migrants to land job interviews we have created this strategy!</p>
 
               <form className="rg-form" onSubmit={handleLeadSubmit}>
                 <div className="rg-form-row">
@@ -240,7 +242,7 @@ export default function GuideContent({
                   <input className="rg-input" type="email" name="email" placeholder="Email" aria-label="Email" value={leadForm.email} onChange={handleLeadChange} required />
                 </div>
                 <button className="rg-cta-btn" type="submit" disabled={leadStatus === "submitting"}>
-                  {leadStatus === "submitting" ? "Sending..." : "Send Me the Guide"}
+                  {leadStatus === "submitting" ? "Sending..." : "Get It For Free"}
                   <ChevronRight size={20} />
                 </button>
                 {leadStatus === "success" ? <p className="rg-p" style={{ marginTop: 8, color: "var(--gold)" }}>Thanks. We&apos;ll send the guide shortly.</p> : null}

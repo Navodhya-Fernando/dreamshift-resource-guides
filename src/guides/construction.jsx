@@ -70,7 +70,7 @@ export default function GuideContent({
                   <span className="rg-step-num">Step 02</span>
                   <div className="rg-step-body">
                     Once you&apos;ve shared those details, use this prompt:
-                    <blockquote>“Suggest me passion project ideas I can do to build my portfolio as a [your role] targeting jobs in [your city], Australia. The projects should show I understand Australian standards, local conditions and industry practices.”</blockquote>
+                    <blockquote>“Suggest me online passion project ideas I can do to build my portfolio as a [your role] targeting jobs in [your city/state], Australia. The projects should show I understand Australian standards, local conditions and industry practices.”</blockquote>
                   </div>
                 </div>
                 <div className="rg-step">
@@ -98,13 +98,13 @@ export default function GuideContent({
                 </div>
                 <div className="rg-option">
                   <span className="rg-option-num">2</span>
-                  <p className="rg-option-text">Do Courses from online course sites like LinkedIn Learning, Alison - No courses from Australian universities though :(</p>
+                  <p className="rg-option-text">No courses from Reputable universities though :(</p>
                 </div>
                 <div className="rg-option active">
                   <span className="rg-option-num">3</span>
                   <div>
-                    <p className="rg-p" style={{ marginBottom: 12, opacity: 0.8 }}>Or 3rd option - which is the best:</p>
-                    <p className="rg-p"><strong>Do Courses from Coursera but offered by reputable universities</strong><br /><span className="rg-accent" style={{ display: 'inline-block', marginTop: 8 }}>We recommend Columbia University courses for Construction</span></p>
+                    <p className="rg-p" style={{ marginBottom: 12, opacity: 0.8 }}>Best Option - Coursera</p>
+                    <p className="rg-p"><strong>Courses from universities</strong><br /><span className="rg-accent" style={{ display: 'inline-block', marginTop: 8 }}>For 25 USD monthly subscription you can do 10,000+ courses</span></p>
                   </div>
                 </div>
               </div>
@@ -220,8 +220,8 @@ export default function GuideContent({
             <FadeUp>
               <Sparkles size={56} className="rg-cta-icon" />
               <p className="rg-num" style={{ marginBottom: 28 }}>Before You Go</p>
-              <h2>We have created a 3 Way Job Search Strategy!</h2>
-              <p className="rg-p rg-cta-desc">By working with 200+ job seekers in Australia, we created a step-by-step guide on 3 strategies people use to land interviews faster. Drop your email and we&apos;ll send it to you for totally free!</p>
+              <h2>Apply for 50 Jobs in just 10h!<br></br>Want to know how?</h2>
+              <p className="rg-p rg-cta-desc">After helping 200+ Aussie Migrants to land job interviews we have created this strategy!</p>
 
               <form className="rg-form" onSubmit={handleLeadSubmit}>
                 <div className="rg-form-row">
@@ -229,7 +229,7 @@ export default function GuideContent({
                   <input className="rg-input" type="email" name="email" placeholder="Email" aria-label="Email" value={leadForm.email} onChange={handleLeadChange} required />
                 </div>
                 <button className="rg-cta-btn" type="submit" disabled={leadStatus === "submitting"}>
-                  {leadStatus === "submitting" ? "Sending..." : "Send Me the Guide"}
+                  {leadStatus === "submitting" ? "Sending..." : "Get It For Free"}
                   <ChevronRight size={20} />
                 </button>
                 {leadStatus === "success" ? <p className="rg-p" style={{ marginTop: 8, color: "var(--gold)" }}>Thanks. We&apos;ll send the guide shortly.</p> : null}

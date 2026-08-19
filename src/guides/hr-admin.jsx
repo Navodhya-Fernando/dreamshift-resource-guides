@@ -231,8 +231,8 @@ export default function GuideContent({
             <FadeUp>
               <Sparkles size={56} className="rg-cta-icon" />
               <p className="rg-num" style={{ marginBottom: 28 }}>Before You Go</p>
-              <h2>We have created a 3 Way Job Search Strategy!</h2>
-              <p className="rg-p rg-cta-desc">By working with 200+ job seekers in Australia, we created a step-by-step guide on 3 strategies people use to land interviews faster. Drop your email and we&apos;ll send it to you for totally free!</p>
+              <h2>Apply for 50 Jobs in just 10h!<br></br>Want to know how?</h2>
+              <p className="rg-p rg-cta-desc">After helping 200+ Aussie Migrants to land job interviews we have created this strategy!</p>
 
               <form className="rg-form" onSubmit={handleLeadSubmit}>
                 <div className="rg-form-row">
@@ -240,7 +240,7 @@ export default function GuideContent({
                   <input className="rg-input" type="email" name="email" placeholder="Email" aria-label="Email" value={leadForm.email} onChange={handleLeadChange} required />
                 </div>
                 <button className="rg-cta-btn" type="submit" disabled={leadStatus === "submitting"}>
-                  {leadStatus === "submitting" ? "Sending..." : "Send Me the Guide"}
+                  {leadStatus === "submitting" ? "Sending..." : "Get It For Free"}
                   <ChevronRight size={20} />
                 </button>
                 {leadStatus === "success" ? <p className="rg-p" style={{ marginTop: 8, color: "var(--gold)" }}>Thanks. We&apos;ll send the guide shortly.</p> : null}
