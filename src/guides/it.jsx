@@ -101,12 +101,16 @@ export default function GuideContent({
 
               <div className="rg-link-list">
                 <p className="rg-video-label" style={{ textAlign: "left", marginTop: 20 }}>Other Platforms you can check<span style={{display: 'none'}}>[cite: 18]</span></p>
-                <a href="https://www.eventbrite.com.au/" target="_blank" rel="noreferrer" className="rg-link-item">
-                  <div className="rg-link-item-left"><span className="rg-link-item-num">01</span> Eventbrite Australia</div>
+                <a href="https://iteventsaustralia.com.au/events" target="_blank" rel="noreferrer" className="rg-link-item">
+                  <div className="rg-link-item-left"><span className="rg-link-item-num">01</span> IT Events Australia</div>
                   <ExternalLink size={20} opacity={0.3} />
                 </a>
                 <a href="https://www.acs.org.au/" target="_blank" rel="noreferrer" className="rg-link-item">
                   <div className="rg-link-item-left"><span className="rg-link-item-num">02</span> ACS</div>
+                  <ExternalLink size={20} opacity={0.3} />
+                </a>
+                <a href="https://www.eventbrite.com.au/" target="_blank" rel="noreferrer" className="rg-link-item">
+                  <div className="rg-link-item-left"><span className="rg-link-item-num">03</span> Eventbrite Australia</div>
                   <ExternalLink size={20} opacity={0.3} />
                 </a>
               </div>
