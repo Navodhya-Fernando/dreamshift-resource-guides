@@ -498,20 +498,7 @@ export default function ResourceGuide() {
         body: JSON.stringify(payload),
       });
 
-      const result = await response.json().catch(() => ({}));
-
-      if (!response.ok) {
-        console.error("Lead submission failed", {
-          status: response.status,
-          response: result,
-        });
-        throw new Error(
-          result?.airtable?.error?.message ||
-          result?.airtable?.error?.type ||
-          result?.error ||
-          "Lead submission failed"
-        );
-      }
+      if (!response.ok) throw new Error("Lead submission failed");
 
       setLeadStatus("success");
       setLeadForm({ name: "", email: "" });

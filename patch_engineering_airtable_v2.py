@@ -1,80 +1,20 @@
-import { Sparkles, ArrowRight, ChevronRight, ExternalLink } from "lucide-react";
+#!/usr/bin/env python3
+from __future__ import annotations
 
-// Engineering resource guide.
-export default function GuideContent({
-  FadeUp,
-  VideoEmbed,
-  leadForm,
-  leadStatus,
-  handleLeadChange,
-  handleLeadSubmit,
-}) {
-  return (
-<main className="rg-main">
-          
-          {/* ── HERO ── */}
-          <section className="rg-hero rg-section">
-            <FadeUp>
-              <h1><span className="rg-gold">Engineering</span> Job Seekers 🇦🇺<span style={{display: 'none'}}>[cite: 1]</span></h1>
-              <p className="rg-hero-sub">Not Much Aussie Experience? Try This!</p>
-              <div className="rg-hero-divider" />
-              <div className="rg-visa-badge">If you have 485, 189, 190, 500, 491, 191, 482, 186 Visa<span style={{display: 'none'}}>[cite: 1]</span></div>
-            </FadeUp>
-          </section>
+import json
+import re
+import shutil
+from pathlib import Path
 
-          {/* ── INTRO ── */}
-          <section className="rg-section">
-            <FadeUp>
-              <p className="rg-p" style={{ fontSize: 28, fontWeight: 500, marginBottom: 40 }}>Hey, It’s Methsara here from DreamShift :)<span style={{display: 'none'}}>[cite: 2]</span></p>
-              <p className="rg-p">Since you are looking for Engineering Jobs, we gathered as many resources as possible to help your job search! Here’s Something you need to know:<span style={{display: 'none'}}>[cite: 2, 3]</span></p>
-              <p className="rg-p">Let’s think you are applying for 100 Jobs on LinkedIn & Seek: Unfortunately, around <span className="rg-accent-red">65%</span> of the jobs you apply will get rejected.<span style={{display: 'none'}}>[cite: 3]</span></p>
-              
-              <div className="rg-callout">
-                <p className="rg-p">That is the reality of Australian Job Market for Migrants! But don’t worry, you still have around <strong className="rg-accent">35 jobs</strong> you can apply for and land interviews! For these 35 Jobs, you will be competing with other Migrants like you.<span style={{display: 'none'}}>[cite: 4]</span></p>
-              </div>
-              
-              <p className="rg-p" style={{ fontWeight: 500 }}>If you can do the following things, you can increase your chances of landing Interviews!<span style={{display: 'none'}}>[cite: 5]</span></p>
-            </FadeUp>
-          </section>
+ROOT = Path.cwd()
 
-          {/* ── 01 PASSION PROJECTS ── */}
-          <section className="rg-section">
-            <FadeUp>
-              <p className="rg-num">01 — Strategy</p>
-              <h2 className="rg-title">Passion Projects<span style={{display: 'none'}}>[cite: 5]</span></h2>
-              
-              <p className="rg-video-label">Watch this first</p>
-              <VideoEmbed src="https://player.vimeo.com/video/1190467338?badge=0&autopause=0&player_id=0&app_id=58479" title="Passion Projects" />
+ENGINEERING = ROOT / "src" / "guides" / "engineering.jsx"
+APP = ROOT / "src" / "App.jsx"
+LEAD = ROOT / "netlify" / "functions" / "lead.cjs"
+ENV_EXAMPLE = ROOT / ".env.example"
+PACKAGE_JSON = ROOT / "package.json"
 
-              <p className="rg-p" style={{ color: "var(--gold)", fontStyle: "italic", fontSize: 16 }}>*Tip: Try to do a passion project based on your state/city, because recruiters can relate to it more easily.<span style={{display: 'none'}}>[cite: 7]</span></p>
-              
-              <p className="rg-p" style={{ marginTop: 48, fontWeight: 500 }}>Here’s a simple guide on how to do a Passion Project and land more interviews:<span style={{display: 'none'}}>[cite: 7]</span></p>
-
-              <div className="rg-steps">
-                <div className="rg-step">
-                  <span className="rg-step-num">Step 01</span>
-                  <div className="rg-step-body">Go to ChatGPT (or any AI tools you use), upload your CV, and clearly mention your job preferences, like the job titles you’re targeting, the location, and the industry.<span style={{display: 'none'}}>[cite: 8]</span></div>
-                </div>
-                <div className="rg-step">
-                  <span className="rg-step-num">Step 02</span>
-                  <div className="rg-step-body">
-                    Once you’ve shared those details, use this prompt:<span style={{display: 'none'}}>[cite: 9]</span>
-                    <blockquote>“Suggest me passion project ideas I can do to build my engineering portfolio targeting [job titles] in [city/state], Australia. The projects should show I understand Australian standards, local conditions and industry practices.”<span style={{display: 'none'}}>[cite: 10]</span></blockquote>
-                  </div>
-                </div>
-                <div className="rg-step">
-                  <span className="rg-step-num">Step 03</span>
-                  <div className="rg-step-body">Go through the ideas, brainstorm, pick the best one, tweak it based on your preferences, and start working on it.<span style={{display: 'none'}}>[cite: 11]</span></div>
-                </div>
-                <div className="rg-step">
-                  <span className="rg-step-num">Step 04</span>
-                  <div className="rg-step-body">As soon as you start, add it as an ongoing project.<span style={{display: 'none'}}>[cite: 12]</span> You don’t have to wait until it’s fully completed. Ongoing projects actually work better than listing them as finished ones..<span style={{display: 'none'}}>[cite: 13]</span></div>
-                </div>
-              </div>
-            </FadeUp>
-          </section>
-
-          {/* ── 02 NETWORKING ── */}
+NETWORKING_SECTION = r'''          {/* ── 02 NETWORKING ── */}
           <section className="rg-section">
             <FadeUp>
               <p className="rg-num">02 — Strategy</p>
@@ -131,7 +71,9 @@ export default function GuideContent({
             </FadeUp>
           </section>
 
-          {/* ── 03 COURSES ── */}
+'''
+
+COURSES_SECTION = r'''          {/* ── 03 COURSES ── */}
           <section className="rg-section">
             <FadeUp>
               <p className="rg-num">03 — Strategy</p>
@@ -247,7 +189,9 @@ export default function GuideContent({
             </FadeUp>
           </section>
 
-          {/* ── 04 VOLUNTEERING ── */}
+'''
+
+VOLUNTEERING_SECTION = r'''          {/* ── 04 VOLUNTEERING ── */}
           <section className="rg-section">
             <FadeUp>
               <p className="rg-num">04 — Strategy</p>
@@ -307,28 +251,345 @@ export default function GuideContent({
             </FadeUp>
           </section>
 
-          {/* ── CTA ── */}
-          <section className="rg-section rg-cta">
-            <FadeUp>
-              <Sparkles size={56} className="rg-cta-icon" />
-              <p className="rg-num" style={{ marginBottom: 28 }}>Before You Go</p>
-              <h2>Apply for 50 Jobs in just 10h!<br></br>Want to know how?</h2>
-              <p className="rg-p rg-cta-desc">After helping 200+ Aussie Migrants to land job interviews we have created this strategy!</p>
+'''
 
-              <form className="rg-form" onSubmit={handleLeadSubmit}>
-                <div className="rg-form-row">
-                  <input className="rg-input" type="text" name="name" placeholder="Name" aria-label="Name" value={leadForm.name} onChange={handleLeadChange} required />
-                  <input className="rg-input" type="email" name="email" placeholder="Email" aria-label="Email" value={leadForm.email} onChange={handleLeadChange} required />
-                </div>
-                <button className="rg-cta-btn" type="submit" disabled={leadStatus === "submitting"}>
-                  {leadStatus === "submitting" ? "Sending..." : "Get It For Free"}
-                  <ChevronRight size={20} />
-                </button>
-                {leadStatus === "success" ? <p className="rg-p" style={{ marginTop: 8, color: "var(--gold)" }}>Thanks. We&apos;ll send the guide shortly.</p> : null}
-                {leadStatus === "error" ? <p className="rg-p" style={{ marginTop: 8, color: "#ffb7b7" }}>Something went wrong. Please try again.</p> : null}
-              </form>
-            </FadeUp>
-          </section>
-        </main>
-  );
-}
+AIRTABLE_FUNCTION = r'''exports.handler = async function (event) {
+  const responseHeaders = {
+    "Content-Type": "application/json",
+    "Cache-Control": "no-store",
+  };
+
+  const reply = (statusCode, payload) => ({
+    statusCode,
+    headers: responseHeaders,
+    body: JSON.stringify(payload),
+  });
+
+  if (event.httpMethod !== "POST") {
+    return reply(405, { error: "Method not allowed" });
+  }
+
+  try {
+    const body = JSON.parse(event.body || "{}");
+
+    const name = String(body.name || "").trim();
+    const email = String(body.email || "").trim();
+    const industry = String(body.industry || "general").trim();
+    const sourceUrl = String(body.sourceUrl || "").trim();
+
+    if (!name || !email) {
+      return reply(400, { error: "Name and email are required" });
+    }
+
+    const token = process.env.AIRTABLE_TOKEN;
+    const baseId = process.env.AIRTABLE_BASE_ID;
+    const tableId = process.env.AIRTABLE_TABLE_ID;
+
+    if (!token || !baseId || !tableId) {
+      console.error("Airtable configuration missing", {
+        hasToken: Boolean(token),
+        hasBaseId: Boolean(baseId),
+        hasTableId: Boolean(tableId),
+      });
+
+      return reply(500, {
+        error: "Airtable environment variables are missing",
+        required: ["AIRTABLE_TOKEN", "AIRTABLE_BASE_ID", "AIRTABLE_TABLE_ID"],
+      });
+    }
+
+    const endpoint =
+      `https://api.airtable.com/v0/${encodeURIComponent(baseId)}/${encodeURIComponent(tableId)}`;
+
+    const fields = {
+      Name: name,
+      Email: email,
+      Industry: industry,
+      "Source URL": sourceUrl,
+    };
+
+    const airtableResponse = await fetch(endpoint, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        records: [{ fields }],
+        typecast: true,
+      }),
+    });
+
+    const raw = await airtableResponse.text();
+
+    let airtableBody;
+    try {
+      airtableBody = raw ? JSON.parse(raw) : {};
+    } catch {
+      airtableBody = { raw };
+    }
+
+    if (!airtableResponse.ok) {
+      console.error("Airtable create-record failed", {
+        status: airtableResponse.status,
+        response: airtableBody,
+      });
+
+      return reply(airtableResponse.status, {
+        error: "Airtable rejected the lead",
+        airtable: airtableBody,
+        hint:
+          airtableResponse.status === 422
+            ? "Check that Base ID/Table ID belong together and the Airtable fields are exactly: Name, Email, Industry, Source URL. If Industry is a select field, pre-create the 9 industry choices or ensure the token can typecast them."
+            : undefined,
+      });
+    }
+
+    return reply(200, {
+      ok: true,
+      id: airtableBody.records?.[0]?.id || null,
+    });
+  } catch (error) {
+    console.error("Lead capture error:", error);
+
+    return reply(500, {
+      error: "Failed to save lead",
+      details: error instanceof Error ? error.message : String(error),
+    });
+  }
+};
+'''
+
+ENV_CONTENT = '''# Airtable lead capture
+AIRTABLE_TOKEN=
+AIRTABLE_BASE_ID=
+AIRTABLE_TABLE_ID=
+'''
+
+
+def backup(path: Path) -> None:
+    if not path.exists():
+        return
+    backup_path = path.with_suffix(path.suffix + ".bak")
+    if not backup_path.exists():
+        shutil.copy2(path, backup_path)
+        print(f"Backup created: {backup_path.relative_to(ROOT)}")
+
+
+def replace_section(text: str, start_marker: str, end_marker: str, replacement: str) -> str:
+    start = text.find(start_marker)
+    if start == -1:
+        raise RuntimeError(f"Could not find section marker: {start_marker}")
+    end = text.find(end_marker, start)
+    if end == -1:
+        raise RuntimeError(f"Could not find following marker: {end_marker}")
+    return text[:start] + replacement + text[end:]
+
+
+def patch_engineering() -> None:
+    if not ENGINEERING.exists():
+        raise FileNotFoundError(f"Missing {ENGINEERING}")
+
+    backup(ENGINEERING)
+    text = ENGINEERING.read_text(encoding="utf-8")
+
+    text = re.sub(
+        r"// IT guide\.\n// This currently duplicates.*?\n// Replace.*?\n",
+        "// Engineering resource guide.\n",
+        text,
+        count=1,
+    )
+
+    text = text.replace(
+        '<h1><span className="rg-gold">IT</span> Job Seekers 🇦🇺',
+        '<h1><span className="rg-gold">Engineering</span> Job Seekers 🇦🇺',
+    )
+    text = text.replace(
+        "Since you are looking for IT Jobs, we gathered as many resources as possible to help your job search!",
+        "Since you are looking for Engineering Jobs, we gathered as many resources as possible to help your job search!",
+    )
+    text = text.replace(
+        "“Suggest me project ideas that I can do online, which will help me land a job in the specific location and job titles I mentioned earlier.”",
+        "“Suggest me passion project ideas I can do to build my engineering portfolio targeting [job titles] in [city/state], Australia. The projects should show I understand Australian standards, local conditions and industry practices.”",
+    )
+
+    text = replace_section(
+        text,
+        "          {/* ── 02 NETWORKING ── */}",
+        "          {/* ── 03 COURSES ── */}",
+        NETWORKING_SECTION,
+    )
+    text = replace_section(
+        text,
+        "          {/* ── 03 COURSES ── */}",
+        "          {/* ── 04 VOLUNTEERING ── */}",
+        COURSES_SECTION,
+    )
+    text = replace_section(
+        text,
+        "          {/* ── 04 VOLUNTEERING ── */}",
+        "          {/* ── CTA ── */}",
+        VOLUNTEERING_SECTION,
+    )
+
+    ENGINEERING.write_text(text, encoding="utf-8")
+    print(f"Patched: {ENGINEERING.relative_to(ROOT)}")
+
+
+def patch_airtable() -> None:
+    LEAD.parent.mkdir(parents=True, exist_ok=True)
+    backup(LEAD)
+    LEAD.write_text(AIRTABLE_FUNCTION, encoding="utf-8")
+    print(f"Patched: {LEAD.relative_to(ROOT)}")
+
+    backup(ENV_EXAMPLE)
+    ENV_EXAMPLE.write_text(ENV_CONTENT, encoding="utf-8")
+    print(f"Patched: {ENV_EXAMPLE.relative_to(ROOT)}")
+
+
+def patch_frontend_error_logging() -> None:
+    if not APP.exists():
+        raise FileNotFoundError(f"Missing {APP}")
+
+    backup(APP)
+    text = APP.read_text(encoding="utf-8")
+
+    old = '''      if (!response.ok) throw new Error("Lead submission failed");
+
+      setLeadStatus("success");'''
+
+    new = '''      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        console.error("Lead submission failed", {
+          status: response.status,
+          response: result,
+        });
+        throw new Error(
+          result?.airtable?.error?.message ||
+          result?.airtable?.error?.type ||
+          result?.error ||
+          "Lead submission failed"
+        );
+      }
+
+      setLeadStatus("success");'''
+
+    if old in text:
+        text = text.replace(old, new, 1)
+        APP.write_text(text, encoding="utf-8")
+        print(f"Patched: {APP.relative_to(ROOT)}")
+    elif 'console.error("Lead submission failed"' in text:
+        print("App.jsx already has detailed error logging; skipped.")
+    else:
+        print("WARNING: Could not locate expected App.jsx fetch error line.")
+
+
+def remove_mongodb_dependency() -> None:
+    if not PACKAGE_JSON.exists():
+        return
+
+    backup(PACKAGE_JSON)
+    data = json.loads(PACKAGE_JSON.read_text(encoding="utf-8"))
+
+    changed = False
+    for key in ("dependencies", "devDependencies"):
+        deps = data.get(key)
+        if isinstance(deps, dict) and "mongodb" in deps:
+            del deps["mongodb"]
+            changed = True
+
+    if changed:
+        PACKAGE_JSON.write_text(
+            json.dumps(data, indent=2, ensure_ascii=False) + "\n",
+            encoding="utf-8",
+        )
+        print("Removed mongodb from package.json")
+
+
+def validate() -> None:
+    eng = ENGINEERING.read_text(encoding="utf-8")
+    lead = LEAD.read_text(encoding="utf-8")
+
+    should_exist = [
+        "Engineering Institute of Technology",
+        "TAFE NSW",
+        "Engineers Australia — CPD",
+        "https://eesa.org.au/events",
+        "https://portal.engineersaustralia.org.au/home/events",
+        "https://www.allconferencealert.com/australia/electrical",
+        "https://eaxchange.engineersaustralia.org.au/officebearerandvolunteerhub/volunteer-opportunities",
+        "https://ewb.org.au/volunteer/",
+        "https://www.seekvolunteer.com.au/",
+        "https://www.eit.edu.au/study-areas/electrical-engineering/",
+        "https://www.eit.edu.au/study-areas/mechanical-engineering/",
+        "https://www.eit.edu.au/study-areas/civil-engineering/",
+        "https://www.eit.edu.au/study-areas/industrial-automation-instrumentation-and-process-control/",
+        "https://www.tafensw.edu.au/course-areas/engineering",
+        "https://www.engineersaustralia.org.au/membership/cpd-requirements",
+    ]
+
+    for item in should_exist:
+        if item not in eng:
+            raise RuntimeError(f"Engineering validation failed; missing: {item}")
+
+    forbidden = [
+        "BA/Data Analyst Roles",
+        "CyberSecurity Roles",
+        "AI / Machine Learning & AI Security",
+        "View all Macquarie courses",
+        "IT & Web Development",
+        "got IT volunteer roles related to SE, QA & BA",
+        "IT networking events",
+        "> ACS<",
+    ]
+
+    leftovers = [item for item in forbidden if item in eng]
+    if leftovers:
+        raise RuntimeError("IT leftovers remain: " + ", ".join(leftovers))
+
+    for item in [
+        "AIRTABLE_TOKEN",
+        "AIRTABLE_BASE_ID",
+        "AIRTABLE_TABLE_ID",
+        '"Source URL"',
+        "typecast: true",
+    ]:
+        if item not in lead:
+            raise RuntimeError(f"Airtable validation failed; missing: {item}")
+
+    if '"Created At"' in lead:
+        raise RuntimeError('lead.cjs still writes "Created At".')
+
+    print("Validation passed: Engineering cleaned + Airtable patched.")
+
+
+def main() -> None:
+    print(f"Repo root: {ROOT}")
+    patch_engineering()
+    patch_airtable()
+    patch_frontend_error_logging()
+    remove_mongodb_dependency()
+    validate()
+
+    print("\nDONE")
+    print("\nAirtable table fields MUST be exactly:")
+    print("  Name")
+    print("  Email")
+    print("  Industry")
+    print("  Source URL")
+    print("\nFor timestamp, add an Airtable field of type: Created time")
+    print("\nNetlify environment variables:")
+    print("  AIRTABLE_TOKEN")
+    print("  AIRTABLE_BASE_ID")
+    print("  AIRTABLE_TABLE_ID")
+    print("\nThen:")
+    print("  npm install")
+    print("  npm run build")
+    print("  git diff")
+    print('  git add . && git commit -m "Fix engineering guide and Airtable lead capture"')
+    print("  git push")
+
+
+if __name__ == "__main__":
+    main()
