@@ -80,38 +80,33 @@ export default function GuideContent({
           <section className="rg-section">
             <FadeUp>
               <p className="rg-num">02 — Strategy</p>
-              <h2 className="rg-title">Networking Events</h2>
-
-              <p className="rg-p">
-                A Huge Mistake, migrants make is staying in their own circles after coming to Australia.{" "}
-                <strong className="rg-accent">Don’t be that guy!</strong>
-              </p>
-
-              <p className="rg-p">
-                Go to as many Engineering networking events as possible, talk to more Aussies in the
-                industry, because referrals can help you land jobs much faster (Referrals can almost
-                guarantee you interviews if your CV is good)
-              </p>
+              <h2 className="rg-title">Networking Events<span style={{display: 'none'}}>[cite: 14]</span></h2>
+              <p className="rg-p">A Huge Mistake, migrants make is staying in their own circles after coming to Australia. <strong className="rg-accent">Don’t be that guy!</strong><span style={{display: 'none'}}>[cite: 14]</span></p>
+              <p className="rg-p">Go to as many IT networking events as possible, talk to more aussies in the IT Industry, because referrals can help you to land jobs much faster (Referrals can almost guarantee you interviews if your CV is good)<span style={{display: 'none'}}>[cite: 14]</span></p>
 
               <div className="rg-callout">
-                <p className="rg-p">
-                  Here are some useful places to find Engineering networking events and conferences in Australia
-                </p>
+                <p className="rg-p">Here are 2 main websites you can check to find IT Networking Oppurtunities<span style={{display: 'none'}}>[cite: 15]</span></p>
+              </div>
+
+              <div className="rg-video-grid">
+                <div className="rg-video-col">
+                  <a href="https://www.meetup.com" target="_blank" rel="noreferrer" className="rg-video-label" style={{textDecoration: 'none', color: 'inherit'}}>Meetup.com<span style={{display: 'none'}}>[cite: 16]</span></a>
+                  <VideoEmbed src="https://player.vimeo.com/video/1190741312?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479" title="Meetup" />
+                </div>
+                <div className="rg-video-col">
+                  <a href="https://lu.ma" target="_blank" rel="noreferrer" className="rg-video-label" style={{textDecoration: 'none', color: 'inherit'}}>Luma Events<span style={{display: 'none'}}>[cite: 16]</span></a>
+                  <VideoEmbed src="https://player.vimeo.com/video/1190465027?badge=0&autopause=0&player_id=0&app_id=58479" title="Luma Events" />
+                </div>
               </div>
 
               <div className="rg-link-list">
-                <a href="https://eesa.org.au/events" target="_blank" rel="noreferrer" className="rg-link-item">
-                  <div className="rg-link-item-left"><span className="rg-link-item-num">01</span>Electric Energy Society of Australia</div>
+                <p className="rg-video-label" style={{ textAlign: "left", marginTop: 20 }}>Other Platforms you can check<span style={{display: 'none'}}>[cite: 18]</span></p>
+                <a href="https://www.eventbrite.com.au/" target="_blank" rel="noreferrer" className="rg-link-item">
+                  <div className="rg-link-item-left"><span className="rg-link-item-num">01</span> Eventbrite Australia</div>
                   <ExternalLink size={20} opacity={0.3} />
                 </a>
-
-                <a href="https://portal.engineersaustralia.org.au/home/events" target="_blank" rel="noreferrer" className="rg-link-item">
-                  <div className="rg-link-item-left"><span className="rg-link-item-num">02</span>Engineers Australia</div>
-                  <ExternalLink size={20} opacity={0.3} />
-                </a>
-
-                <a href="https://www.allconferencealert.com/australia/electrical" target="_blank" rel="noreferrer" className="rg-link-item">
-                  <div className="rg-link-item-left"><span className="rg-link-item-num">03</span>All Conference Alert</div>
+                <a href="https://www.acs.org.au/" target="_blank" rel="noreferrer" className="rg-link-item">
+                  <div className="rg-link-item-left"><span className="rg-link-item-num">02</span> ACS</div>
                   <ExternalLink size={20} opacity={0.3} />
                 </a>
               </div>
@@ -123,23 +118,6 @@ export default function GuideContent({
             <FadeUp>
               <p className="rg-num">03 — Strategy</p>
               <h2 className="rg-title">Online Courses & Certifications<span style={{display: 'none'}}>[cite: 19]</span></h2>
-
-              {/* ── ENGINEERING COURSE PROVIDERS START ── */}
-              <div className="rg-course-category">
-                <p className="rg-course-category-title">Australian Engineering Training Providers</p>
-
-                <a href="https://www.eit.edu.au" target="_blank" rel="noreferrer" className="rg-course-item">
-                  <ArrowRight size={20} className="rg-course-icon" />
-                  Engineering Institute of Technology
-                </a>
-
-                <a href="https://www.tafensw.edu.au" target="_blank" rel="noreferrer" className="rg-course-item">
-                  <ArrowRight size={20} className="rg-course-icon" />
-                  TAFE NSW
-                </a>
-              </div>
-              {/* ── ENGINEERING COURSE PROVIDERS END ── */}
-
               <p className="rg-p" style={{ fontWeight: 500 }}>You have 3 Options<span style={{display: 'none'}}>[cite: 19]</span></p>
 
               <div className="rg-options">
@@ -221,38 +199,29 @@ export default function GuideContent({
           <section className="rg-section">
             <FadeUp>
               <p className="rg-num">04 — Strategy</p>
-              <h2 className="rg-title">Volunteering</h2>
-
-              <p className="rg-p">
-                Yes, Volunteering! Aussie recruiters say they love migrants who have done volunteering
-                because it shows that you are actively contributing to Australian communities.
-              </p>
+              <h2 className="rg-title">Volunteering<span style={{display: 'none'}}>[cite: 21]</span></h2>
+              <p className="rg-p">Yes, Volunteering!<span style={{display: 'none'}}>[cite: 21]</span> Aussie recruiters say they love migrants who have done volunteering because it shows that you are actively contributing to Australian communities.<span style={{display: 'none'}}>[cite: 22]</span></p>
+              <p className="rg-p">We recently had multiple clients like you, who got IT volunteer roles related to SE, QA & BA, Also the best part is that recruiters will think that you are a nice person 😉<span style={{display: 'none'}}>[cite: 22]</span></p>
 
               <p className="rg-video-label" style={{ marginTop: 64 }}>Watch this first</p>
-              <VideoEmbed
-                src="https://player.vimeo.com/video/1209435820?badge=0&autopause=0&player_id=0&app_id=58479"
-                title="Best Website to find Volunteering Roles in Australia if you don't have local job experience"
-              />
+              <VideoEmbed src="https://player.vimeo.com/video/1209435820?badge=0&autopause=0&player_id=0&app_id=58479" title="Best Website to find Volunteering Roles in Australia if you don't have local job experience" />
 
               <div className="rg-link-list">
-                <p className="rg-video-label" style={{ textAlign: "left", marginTop: 20 }}>
-                  Engineering & Community Volunteering Options
-                </p>
-
+                <p className="rg-video-label" style={{ textAlign: "left", marginTop: 20 }}>There are 2 Main Volunteer Sites:<span style={{display: 'none'}}>[cite: 22]</span></p>
                 <a href="https://www.seekvolunteer.com.au/" target="_blank" rel="noreferrer" className="rg-link-item">
-                  <div className="rg-link-item-left"><span className="rg-link-item-num">01</span>SEEK Volunteer</div>
+                  <div className="rg-link-item-left"><span className="rg-link-item-num">1</span> Seek Volunteer<span style={{display: 'none'}}>[cite: 23]</span></div>
                   <ExternalLink size={20} opacity={0.3} />
                 </a>
+                <a href="https://govolunteer.com.au/" target="_blank" rel="noreferrer" className="rg-link-item">
+                  <div className="rg-link-item-left"><span className="rg-link-item-num">2</span> GoVolunteer<span style={{display: 'none'}}>[cite: 23]</span></div>
+                  <ExternalLink size={20} opacity={0.3} />
+                </a>
+              </div>
 
-                <a href="https://eaxchange.engineersaustralia.org.au/officebearerandvolunteerhub/volunteer-opportunities" target="_blank" rel="noreferrer" className="rg-link-item">
-                  <div className="rg-link-item-left"><span className="rg-link-item-num">02</span>Engineers Australia</div>
-                  <ExternalLink size={20} opacity={0.3} />
-                </a>
+              <p className="rg-p">Both of the sites have volunteering opportunities from one time ones to long term projects.<span style={{display: 'none'}}>[cite: 23]</span> But you can also find opportunities relevant to IT here :)<span style={{display: 'none'}}>[cite: 23]</span></p>
 
-                <a href="https://ewb.org.au/volunteer/" target="_blank" rel="noreferrer" className="rg-link-item">
-                  <div className="rg-link-item-left"><span className="rg-link-item-num">03</span>Engineers Without Borders Australia</div>
-                  <ExternalLink size={20} opacity={0.3} />
-                </a>
+              <div className="rg-callout">
+                <p className="rg-p">Now click here and don’t forget to select <strong className="rg-accent">“IT & Web Development”</strong> under “Type of work”<span style={{display: 'none'}}>[cite: 24]</span></p>
               </div>
             </FadeUp>
           </section>

@@ -1,27 +1,10 @@
-const { MongoClient } = require("mongodb");
+exports.handler = async function (event) {
+  const headers = { "Content-Type": "application/json" };
 
-let client;
-let clientPromise;
-
-const getClient = async () => {
-  if (!process.env.MONGODB_URI) {
-    throw new Error("Missing MONGODB_URI");
-  }
-
-  if (!clientPromise) {
-    client = new MongoClient(process.env.MONGODB_URI);
-    clientPromise = client.connect();
-  }
-
-  await clientPromise;
-  return client;
-};
-
-exports.handler = async (event) => {
   if (event.httpMethod !== "POST") {
     return {
       statusCode: 405,
-      headers: { "Content-Type": "application/json" },
+      headers,
       body: JSON.stringify({ error: "Method not allowed" }),
     };
   }
@@ -29,37 +12,76 @@ exports.handler = async (event) => {
   try {
     const { name, email, industry, sourceUrl } = JSON.parse(event.body || "{}");
 
-    if (!name || !email) {
+    if (!name?.trim() || !email?.trim()) {
       return {
         statusCode: 400,
-        headers: { "Content-Type": "application/json" },
+        headers,
         body: JSON.stringify({ error: "Name and email are required" }),
       };
     }
 
-    const dbName = process.env.MONGODB_DB || "dreamshift";
-    const collectionName = process.env.MONGODB_COLLECTION || "leads";
-    const mongoClient = await getClient();
-    const collection = mongoClient.db(dbName).collection(collectionName);
+    const token = process.env.AIRTABLE_TOKEN;
+    const baseId = process.env.AIRTABLE_BASE_ID;
+    const tableId = process.env.AIRTABLE_TABLE_ID;
 
-    const result = await collection.insertOne({
-      name,
-      email,
-      industry: industry || "general",
-      sourceUrl: sourceUrl || null,
-      createdAt: new Date(),
+    if (!token || !baseId || !tableId) {
+      console.error("Missing Airtable environment variables");
+      return {
+        statusCode: 500,
+        headers,
+        body: JSON.stringify({ error: "Airtable is not configured" }),
+      };
+    }
+
+    const airtableUrl =
+      `https://api.airtable.com/v0/${encodeURIComponent(baseId)}/${encodeURIComponent(tableId)}`;
+
+    const airtableResponse = await fetch(airtableUrl, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        records: [
+          {
+            fields: {
+              Name: name.trim(),
+              Email: email.trim(),
+              Industry: industry || "general",
+              "Source URL": sourceUrl || "",
+              "Created At": new Date().toISOString(),
+            },
+          },
+        ],
+        typecast: true,
+      }),
     });
+
+    const result = await airtableResponse.json();
+
+    if (!airtableResponse.ok) {
+      console.error("Airtable error:", JSON.stringify(result));
+      return {
+        statusCode: airtableResponse.status,
+        headers,
+        body: JSON.stringify({ error: "Failed to save lead", details: result }),
+      };
+    }
 
     return {
       statusCode: 200,
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ ok: true, id: result.insertedId }),
+      headers,
+      body: JSON.stringify({
+        ok: true,
+        id: result.records?.[0]?.id || null,
+      }),
     };
   } catch (error) {
     console.error("Lead capture error:", error);
     return {
       statusCode: 500,
-      headers: { "Content-Type": "application/json" },
+      headers,
       body: JSON.stringify({ error: "Failed to save lead" }),
     };
   }
