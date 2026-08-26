@@ -1,8 +1,6 @@
 import { Sparkles, ArrowRight, ChevronRight, ExternalLink } from "lucide-react";
 
-// IT guide.
-// This currently duplicates the supplied IT guide exactly.
-// Replace the text/links in THIS file when you are ready to customise IT.
+// Logistics resource guide.
 export default function GuideContent({
   FadeUp,
   VideoEmbed,
@@ -17,7 +15,7 @@ export default function GuideContent({
           {/* ── HERO ── */}
           <section className="rg-hero rg-section">
             <FadeUp>
-              <h1><span className="rg-gold">Logistics</span> Job Seekers 🇦🇺<span style={{display: 'none'}}>[cite: 1]</span></h1>
+              <h1><span className="rg-gold">Logistics &amp; Supply Chain</span> Job Seekers 🇦🇺<span style={{display: 'none'}}>[cite: 1]</span></h1>
               <p className="rg-hero-sub">Not Much Aussie Experience? Try This!</p>
               <div className="rg-hero-divider" />
               <div className="rg-visa-badge">If you have 485, 189, 190, 500, 491, 191, 482, 186 Visa<span style={{display: 'none'}}>[cite: 1]</span></div>
@@ -61,7 +59,7 @@ export default function GuideContent({
                   <span className="rg-step-num">Step 02</span>
                   <div className="rg-step-body">
                     Once you’ve shared those details, use this prompt:<span style={{display: 'none'}}>[cite: 9]</span>
-                    <blockquote>“Suggest me project ideas that I can do online, which will help me land a job in the specific location and job titles I mentioned earlier.”<span style={{display: 'none'}}>[cite: 10]</span></blockquote>
+                    <blockquote>“Suggest me passion project ideas I can do to build my portfolio targeting Logistics, Supply Chain, Procurement or Operations jobs in [city/state], Australia. The projects should show I understand Australian industry practices, local conditions and relevant systems.”<span style={{display: 'none'}}>[cite: 10]</span></blockquote>
                   </div>
                 </div>
                 <div className="rg-step">
@@ -80,36 +78,71 @@ export default function GuideContent({
           <section className="rg-section">
             <FadeUp>
               <p className="rg-num">02 — Strategy</p>
-              <h2 className="rg-title">Networking Events<span style={{display: 'none'}}>[cite: 14]</span></h2>
-              <p className="rg-p">A Huge Mistake, migrants make is staying in their own circles after coming to Australia. <strong className="rg-accent">Don’t be that guy!</strong><span style={{display: 'none'}}>[cite: 14]</span></p>
-              <p className="rg-p">Go to as many IT networking events as possible, talk to more aussies in the IT Industry, because referrals can help you to land jobs much faster (Referrals can almost guarantee you interviews if your CV is good)<span style={{display: 'none'}}>[cite: 14]</span></p>
+              <h2 className="rg-title">Networking Events</h2>
+
+              <p className="rg-p">
+                A Huge Mistake migrants make is staying in their own circles after coming to Australia.{" "}
+                <strong className="rg-accent">Don’t be that guy!</strong>
+              </p>
+
+              <p className="rg-p">
+                Go to supply chain, logistics, freight and trade events in your target city.
+                These are good places to meet people working in procurement, warehousing,
+                transport, distribution, importing, exporting and operations.
+              </p>
 
               <div className="rg-callout">
-                <p className="rg-p">Here are 2 main websites you can check to find IT Networking Oppurtunities<span style={{display: 'none'}}>[cite: 15]</span></p>
-              </div>
-
-              <div className="rg-video-grid">
-                <div className="rg-video-col">
-                  <a href="https://www.meetup.com" target="_blank" rel="noreferrer" className="rg-video-label" style={{textDecoration: 'none', color: 'inherit'}}>Meetup.com<span style={{display: 'none'}}>[cite: 16]</span></a>
-                  <VideoEmbed src="https://player.vimeo.com/video/1190741312?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479" title="Meetup" />
-                </div>
-                <div className="rg-video-col">
-                  <a href="https://lu.ma" target="_blank" rel="noreferrer" className="rg-video-label" style={{textDecoration: 'none', color: 'inherit'}}>Luma Events<span style={{display: 'none'}}>[cite: 16]</span></a>
-                  <VideoEmbed src="https://player.vimeo.com/video/1190465027?badge=0&autopause=0&player_id=0&app_id=58479" title="Luma Events" />
-                </div>
+                <p className="rg-p">
+                  Here are 3 useful places to keep checking for Supply Chain &amp; Logistics events in Australia.
+                </p>
               </div>
 
               <div className="rg-link-list">
-                <p className="rg-video-label" style={{ textAlign: "left", marginTop: 20 }}>Other Platforms you can check<span style={{display: 'none'}}>[cite: 18]</span></p>
-                <a href="https://www.eventbrite.com.au/" target="_blank" rel="noreferrer" className="rg-link-item">
-                  <div className="rg-link-item-left"><span className="rg-link-item-num">01</span> Eventbrite Australia</div>
+                <a
+                  href="https://info.sclaa.com.au/events"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rg-link-item"
+                >
+                  <div className="rg-link-item-left">
+                    <span className="rg-link-item-num">01</span>
+                    Australasian Supply Chain &amp; Logistics Association
+                  </div>
                   <ExternalLink size={20} opacity={0.3} />
                 </a>
-                <a href="https://www.acs.org.au/" target="_blank" rel="noreferrer" className="rg-link-item">
-                  <div className="rg-link-item-left"><span className="rg-link-item-num">02</span> ACS</div>
+
+                <a
+                  href="https://www.ftalliance.com.au/upcoming-events"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rg-link-item"
+                >
+                  <div className="rg-link-item-left">
+                    <span className="rg-link-item-num">02</span>
+                    Freight &amp; Trade Alliance
+                  </div>
+                  <ExternalLink size={20} opacity={0.3} />
+                </a>
+
+                <a
+                  href="https://austlogistics.com.au/upcoming-events/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rg-link-item"
+                >
+                  <div className="rg-link-item-left">
+                    <span className="rg-link-item-num">03</span>
+                    Australian Logistics Council
+                  </div>
                   <ExternalLink size={20} opacity={0.3} />
                 </a>
               </div>
+
+              <p className="rg-p">
+                Tip: Look beyond job fairs. Industry breakfasts, freight conferences,
+                supply chain webinars, site tours and trade events can give you much better
+                access to people who already work in the sector.
+              </p>
             </FadeUp>
           </section>
 
@@ -117,81 +150,97 @@ export default function GuideContent({
           <section className="rg-section">
             <FadeUp>
               <p className="rg-num">03 — Strategy</p>
-              <h2 className="rg-title">Online Courses & Certifications<span style={{display: 'none'}}>[cite: 19]</span></h2>
-              <p className="rg-p" style={{ fontWeight: 500 }}>You have 3 Options<span style={{display: 'none'}}>[cite: 19]</span></p>
+              <h2 className="rg-title">Online Courses &amp; Certifications</h2>
 
-              <div className="rg-options">
-                <div className="rg-option">
-                  <span className="rg-option-num">1</span>
-                  <p className="rg-option-text">Do Courses directly from Aussie Univeristies/Institutes - Expensive though :(<span style={{display: 'none'}}>[cite: 19]</span></p>
-                </div>
-                <div className="rg-option">
-                  <span className="rg-option-num">2</span>
-                  <p className="rg-option-text">Do Courses from online course sites like LinkedIn Learning, Alison - No courses from Australian universities though :(<span style={{display: 'none'}}>[cite: 20]</span></p>
-                </div>
-                <div className="rg-option active">
-                  <span className="rg-option-num">3</span>
-                  <div>
-                    <p className="rg-p" style={{ marginBottom: 12, opacity: 0.8 }}>Or 3rd option - which is the best:<span style={{display: 'none'}}>[cite: 20]</span></p>
-                    <p className="rg-p"><strong>Do Courses from Coursera but offered by Australian Universities</strong><span style={{display: 'none'}}>[cite: 20]</span> <br/><span className="rg-accent" style={{ display: 'inline-block', marginTop: 8 }}>We recommend Macquarie University (Sydney)</span><span style={{display: 'none'}}>[cite: 20]</span></p>
-                  </div>
-                </div>
+              <p className="rg-p">
+                For Logistics, Supply Chain and Procurement roles, focus on courses that build
+                practical knowledge in procurement, contract management, logistics, inventory,
+                warehousing, sourcing and supply chain operations.
+              </p>
+
+              <div className="rg-callout">
+                <p className="rg-p">
+                  A good approach is to combine an <strong className="rg-accent">Australian provider</strong>
+                  with a recognised global learning platform such as Coursera.
+                </p>
               </div>
 
-              {/* BA Category */}
               <div className="rg-course-category">
-                <p className="rg-course-category-title">If you are into BA/Data Analyst Roles:<span style={{display: 'none'}}>[cite: 21]</span></p>
-                <a href="https://www.coursera.org/learn/business-intelligence-data-analytics" target="_blank" rel="noreferrer" className="rg-course-item">
-                  <ArrowRight size={20} className="rg-course-icon" /> Business intelligence and data analytics: Generate insights<span style={{display: 'none'}}>[cite: 29]</span>
-                </a>
-                <a href="https://www.coursera.org/specializations/excel-data-analytics-visualization" target="_blank" rel="noreferrer" className="rg-course-item">
-                  <ArrowRight size={20} className="rg-course-icon" /> Excel Skills for Data Analytics and Visualization Specialization<span style={{display: 'none'}}>[cite: 30]</span>
-                </a>
-                <a href="https://www.coursera.org/learn/excel-data-analysis-fundamentals" target="_blank" rel="noreferrer" className="rg-course-item">
-                  <ArrowRight size={20} className="rg-course-icon" /> Excel Fundamentals for Data Analysis<span style={{display: 'none'}}>[cite: 31]</span>
-                </a>
-                <a href="https://www.coursera.org/learn/excel-power-tools" target="_blank" rel="noreferrer" className="rg-course-item">
-                  <ArrowRight size={20} className="rg-course-icon" /> Excel Power Tools for Data Analysis<span style={{display: 'none'}}>[cite: 32]</span>
+                <p className="rg-course-category-title">Australian Online Courses</p>
+
+                <p className="rg-p">
+                  If you are targeting Procurement, Contracts or Supply Chain roles,
+                  this is a locally relevant option to consider.
+                </p>
+
+                <a
+                  href="https://australianonlinecourses.com.au/courses/certificate-of-procurement-and-contract-management/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rg-course-item"
+                >
+                  <ArrowRight size={20} className="rg-course-icon" />
+                  Certificate of Procurement and Contract Management
                 </a>
               </div>
 
-              {/* Cyber Category */}
               <div className="rg-course-category">
-                <p className="rg-course-category-title">If you are into CyberSecurity Roles:<span style={{display: 'none'}}>[cite: 21]</span></p>
-                <a href="https://www.coursera.org/learn/cyber-security-essentials" target="_blank" rel="noreferrer" className="rg-course-item">
-                  <ArrowRight size={20} className="rg-course-icon" /> Cyber Security: Essentials<span style={{display: 'none'}}>[cite: 42]</span>
+                <p className="rg-course-category-title">Coursera — Supply Chain &amp; Logistics</p>
+
+                <p className="rg-p">
+                  Coursera has several strong supply-chain options covering logistics,
+                  operations, planning, sourcing, inventory and strategy.
+                </p>
+
+                <a
+                  href="https://www.coursera.org/specializations/supply-chain-management"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rg-course-item"
+                >
+                  <ArrowRight size={20} className="rg-course-icon" />
+                  Supply Chain Management Specialization — Rutgers University
                 </a>
-                <a href="https://www.coursera.org/learn/cyber-security-essentials-workplace" target="_blank" rel="noreferrer" className="rg-course-item">
-                  <ArrowRight size={20} className="rg-course-icon" /> Cyber Security: Essentials for Workplace<span style={{display: 'none'}}>[cite: 43]</span>
+
+                <a
+                  href="https://www.coursera.org/learn/supply-chain-logistics"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rg-course-item"
+                >
+                  <ArrowRight size={20} className="rg-course-icon" />
+                  Supply Chain Logistics — Rutgers University
                 </a>
-                <a href="https://www.coursera.org/learn/cyber-security-digital-forensics" target="_blank" rel="noreferrer" className="rg-course-item">
-                  <ArrowRight size={20} className="rg-course-icon" /> Cyber Security: Digital Forensics<span style={{display: 'none'}}>[cite: 45]</span>
+
+                <a
+                  href="https://www.coursera.org/learn/operations"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rg-course-item"
+                >
+                  <ArrowRight size={20} className="rg-course-icon" />
+                  Supply Chain Operations — Rutgers University
                 </a>
-                <a href="https://www.coursera.org/learn/cyber-security-applied-cryptography" target="_blank" rel="noreferrer" className="rg-course-item">
-                  <ArrowRight size={20} className="rg-course-icon" /> Cyber Security: Applied Cryptography<span style={{display: 'none'}}>[cite: 46]</span>
+
+                <a
+                  href="https://www.coursera.org/specializations/supply-chain-analytics"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rg-course-item"
+                >
+                  <ArrowRight size={20} className="rg-course-icon" />
+                  Supply Chain Analytics Specialization — Rutgers University
                 </a>
               </div>
 
-              {/* AI Category */}
-              <div className="rg-course-category">
-                <p className="rg-course-category-title">AI / Machine Learning & AI Security<span style={{display: 'none'}}>[cite: 62]</span></p>
-                <a href="https://www.coursera.org/learn/cyber-security-application-of-ai" target="_blank" rel="noreferrer" className="rg-course-item">
-                  <ArrowRight size={20} className="rg-course-icon" /> Cyber Security: Application of AI<span style={{display: 'none'}}>[cite: 63]</span>
-                </a>
-                <a href="https://www.coursera.org/learn/mq-csa-ai-for-cyber-security" target="_blank" rel="noreferrer" className="rg-course-item">
-                  <ArrowRight size={20} className="rg-course-icon" /> AI for Cyber Security<span style={{display: 'none'}}>[cite: 64]</span>
-                </a>
-                <a href="https://www.coursera.org/learn/cyber-security-security-ai" target="_blank" rel="noreferrer" className="rg-course-item">
-                  <ArrowRight size={20} className="rg-course-icon" /> Cyber Security: Security of AI<span style={{display: 'none'}}>[cite: 65]</span>
-                </a>
-                <a href="https://www.coursera.org/specializations/cyber-security-essentials-for-ai" target="_blank" rel="noreferrer" className="rg-course-item">
-                  <ArrowRight size={20} className="rg-course-icon" /> Cyber Security: Essentials for AI Specialization<span style={{display: 'none'}}>[cite: 66]</span>
-                </a>
+              <div className="rg-callout">
+                <p className="rg-p">
+                  <strong className="rg-accent">How to choose:</strong> If you want Procurement or Contracts,
+                  start with Procurement &amp; Contract Management. If you want Logistics, Warehouse or Operations
+                  roles, start with Supply Chain Logistics or Supply Chain Operations. If you are targeting
+                  analyst-style supply chain roles, add Supply Chain Analytics.
+                </p>
               </div>
-
-              <a href="https://www.coursera.org/partners/macquarie" target="_blank" rel="noreferrer" style={{ fontSize: 14, color: "var(--gold)", textTransform: "uppercase", letterSpacing: "0.15em", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 10, marginTop: 24, fontWeight: 700 }}>
-                View all Macquarie courses <ExternalLink size={16} />
-              </a>
             </FadeUp>
           </section>
 
@@ -199,30 +248,81 @@ export default function GuideContent({
           <section className="rg-section">
             <FadeUp>
               <p className="rg-num">04 — Strategy</p>
-              <h2 className="rg-title">Volunteering<span style={{display: 'none'}}>[cite: 21]</span></h2>
-              <p className="rg-p">Yes, Volunteering!<span style={{display: 'none'}}>[cite: 21]</span> Aussie recruiters say they love migrants who have done volunteering because it shows that you are actively contributing to Australian communities.<span style={{display: 'none'}}>[cite: 22]</span></p>
-              <p className="rg-p">We recently had multiple clients like you, who got IT volunteer roles related to SE, QA & BA, Also the best part is that recruiters will think that you are a nice person 😉<span style={{display: 'none'}}>[cite: 22]</span></p>
+              <h2 className="rg-title">Volunteering</h2>
 
-              <p className="rg-video-label" style={{ marginTop: 64 }}>Watch this first</p>
-              <VideoEmbed src="https://player.vimeo.com/video/1209435820?badge=0&autopause=0&player_id=0&app_id=58479" title="Best Website to find Volunteering Roles in Australia if you don't have local job experience" />
+              <p className="rg-p">
+                Yes, Volunteering! Australian volunteering can help you build local experience,
+                meet people, and give recruiters something current to ask you about.
+              </p>
+
+              <p className="rg-p">
+                For Logistics candidates, look for opportunities involving stock handling,
+                warehouse support, deliveries, donation sorting, transport coordination,
+                event logistics or general operations.
+              </p>
+
+              <p className="rg-video-label" style={{ marginTop: 64 }}>
+                Start with SEEK Volunteer
+              </p>
+
+              <VideoEmbed
+                src="https://player.vimeo.com/video/1209435820?badge=0&autopause=0&player_id=0&app_id=58479"
+                title="Best Website to find Volunteering Roles in Australia if you don't have local job experience"
+              />
 
               <div className="rg-link-list">
-                <p className="rg-video-label" style={{ textAlign: "left", marginTop: 20 }}>There are 2 Main Volunteer Sites:<span style={{display: 'none'}}>[cite: 22]</span></p>
-                <a href="https://www.seekvolunteer.com.au/" target="_blank" rel="noreferrer" className="rg-link-item">
-                  <div className="rg-link-item-left"><span className="rg-link-item-num">1</span> Seek Volunteer<span style={{display: 'none'}}>[cite: 23]</span></div>
+                <p
+                  className="rg-video-label"
+                  style={{ textAlign: "left", marginTop: 20 }}
+                >
+                  Logistics &amp; Community Volunteering Options
+                </p>
+
+                <a
+                  href="https://www.seekvolunteer.com.au/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rg-link-item"
+                >
+                  <div className="rg-link-item-left">
+                    <span className="rg-link-item-num">01</span>
+                    SEEK Volunteer
+                  </div>
                   <ExternalLink size={20} opacity={0.3} />
                 </a>
-                <a href="https://govolunteer.com.au/" target="_blank" rel="noreferrer" className="rg-link-item">
-                  <div className="rg-link-item-left"><span className="rg-link-item-num">2</span> GoVolunteer<span style={{display: 'none'}}>[cite: 23]</span></div>
+
+                <a
+                  href="https://www.lifelinesouthcoast.org.au/volunteer/logisticsteamvolunteer/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rg-link-item"
+                >
+                  <div className="rg-link-item-left">
+                    <span className="rg-link-item-num">02</span>
+                    Lifeline South Coast — Logistics Team Volunteer
+                  </div>
+                  <ExternalLink size={20} opacity={0.3} />
+                </a>
+
+                <a
+                  href="https://makeadifference.volunteering.nsw.gov.au/volunteering"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rg-link-item"
+                >
+                  <div className="rg-link-item-left">
+                    <span className="rg-link-item-num">03</span>
+                    NSW Government — Make a Difference Volunteering
+                  </div>
                   <ExternalLink size={20} opacity={0.3} />
                 </a>
               </div>
 
-              <p className="rg-p">Both of the sites have volunteering opportunities from one time ones to long term projects.<span style={{display: 'none'}}>[cite: 23]</span> But you can also find opportunities relevant to IT here :)<span style={{display: 'none'}}>[cite: 23]</span></p>
-
-              <div className="rg-callout">
-                <p className="rg-p">Now click here and don’t forget to select <strong className="rg-accent">“IT & Web Development”</strong> under “Type of work”<span style={{display: 'none'}}>[cite: 24]</span></p>
-              </div>
+              <p className="rg-p">
+                Search using terms such as logistics, warehouse, transport, stock,
+                distribution, operations, stores and delivery to find opportunities that
+                are closer to your target roles.
+              </p>
             </FadeUp>
           </section>
 
