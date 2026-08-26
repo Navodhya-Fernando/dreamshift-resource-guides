@@ -94,11 +94,11 @@ export default function GuideContent({
               <div className="rg-options">
                 <div className="rg-option">
                   <span className="rg-option-num">1</span>
-                  <p className="rg-option-text">Do Courses directly from Aussie Universities/Institutes - Expensive though :(</p>
+                  <p className="rg-option-text"><a href="https://www.tafensw.edu.au" target="_blank" rel="noreferrer">TAFE NSW</a> - Practical, industry-focused courses from a recognised Australian provider.</p>
                 </div>
                 <div className="rg-option">
                   <span className="rg-option-num">2</span>
-                  <p className="rg-option-text">No courses from Reputable universities though :(</p>
+                  <p className="rg-option-text"><a href="https://www.tafecourses.com.au" target="_blank" rel="noreferrer">TAFE Courses</a> - Compare TAFE courses and find options available across Australia.</p>
                 </div>
                 <div className="rg-option active">
                   <span className="rg-option-num">3</span>
@@ -138,6 +138,11 @@ export default function GuideContent({
                 <a href="https://www.autodesk.com/education/home" target="_blank" rel="noreferrer" className="rg-course-item"><ArrowRight size={20} className="rg-course-icon" /> BIM Fundamentals (Autodesk - free)</a>
                 <a href="https://www.autodesk.com/education/home" target="_blank" rel="noreferrer" className="rg-course-item"><ArrowRight size={20} className="rg-course-icon" /> Revit Architecture Fundamentals (free student access)</a>
                 <a href="https://www.autodesk.com/education/home" target="_blank" rel="noreferrer" className="rg-course-item"><ArrowRight size={20} className="rg-course-icon" /> Navisworks Fundamentals (free student access)</a>
+              </div>
+
+              <div className="rg-course-category">
+                <p className="rg-course-category-title">For in-person construction training:</p>
+                <a href="https://www.buildersacademy.edu.au" target="_blank" rel="noreferrer" className="rg-course-item"><ArrowRight size={20} className="rg-course-icon" /> Builders Academy Australia (not online)</a>
               </div>
 
               <a href="https://www.coursera.org/search?query=Columbia%20University%20Construction" target="_blank" rel="noreferrer" style={{ fontSize: 14, color: "var(--gold)", textTransform: "uppercase", letterSpacing: "0.15em", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 10, marginTop: 24, fontWeight: 700 }}>
@@ -191,25 +196,18 @@ export default function GuideContent({
                 <p className="rg-p">Here are the main ways to find Construction &amp; Civil Networking Opportunities in Australia</p>
               </div>
 
-              <div className="rg-video-grid">
-                <div className="rg-video-col">
-                  <a href="https://www.engineersaustralia.org.au/" target="_blank" rel="noreferrer" className="rg-video-label" style={{ textDecoration: 'none', color: 'inherit' }}>Engineers Australia</a>
+              <FadeUp>
+                  <a href="https://vartas.com.au/building-construction-events/" target="_blank" rel="noreferrer" className="rg-video-label" style={{ textDecoration: 'none', color: 'inherit' }}>Vartas</a>
                   <div className="rg-video-wrap">
-                    <YouTubeShortEmbed videoId="7dbXu5cCZv8" title="Engineers Australia - YouTube Shorts" />
+                    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7316298394069618688?compact=1" height="399" width="504" frameBorder="0" allowFullScreen title="Embedded post"></iframe>
                   </div>
-                </div>
-                <div className="rg-video-col">
-                  <a href="https://masterbuilders.com.au/" target="_blank" rel="noreferrer" className="rg-video-label" style={{ textDecoration: 'none', color: 'inherit' }}>Master Builders Association</a>
-                  <div className="rg-video-wrap">
-                    <YouTubeShortEmbed videoId="pfu3cm0BtA0" title="Master Builders Association - YouTube Shorts" />
-                  </div>
-                </div>
-              </div>
+              </FadeUp>
 
               <div className="rg-link-list">
                 <p className="rg-video-label" style={{ textAlign: "left", marginTop: 20 }}>Other places to keep an eye on</p>
-                <a href="https://www.engineersaustralia.org.au/" target="_blank" rel="noreferrer" className="rg-link-item"><div className="rg-link-item-left"><span className="rg-link-item-num">01</span> Engineers Australia</div><ExternalLink size={20} opacity={0.3} /></a>
-                <a href="https://masterbuilders.com.au/" target="_blank" rel="noreferrer" className="rg-link-item"><div className="rg-link-item-left"><span className="rg-link-item-num">02</span> Master Builders Association</div><ExternalLink size={20} opacity={0.3} /></a>
+                <a href="https://ccfwa.com.au/events" target="_blank" rel="noreferrer" className="rg-link-item"><div className="rg-link-item-left"><span className="rg-link-item-num">01</span> Civil Contractors Federation - Western Australia</div><ExternalLink size={20} opacity={0.3} /></a>
+                <a href="https://www.constructors.com.au/events/" target="_blank" rel="noreferrer" className="rg-link-item"><div className="rg-link-item-left"><span className="rg-link-item-num">02</span> Australan Constructors Association</div><ExternalLink size={20} opacity={0.3} /></a>
+                <a href="https://www.tradeearthmovers.com.au/earthmoving-events-calendar/" target="_blank" rel="noreferrer" className="rg-link-item"><div className="rg-link-item-left"><span className="rg-link-item-num">03</span> Trade Earthmovers</div><ExternalLink size={20} opacity={0.3} /></a>
               </div>
 
               <p className="rg-p">Look for events, local chapters, breakfast sessions, trade expos, CPD nights, and industry meetups in your target city.</p>
