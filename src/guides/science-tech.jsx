@@ -1,8 +1,6 @@
 import { Sparkles, ArrowRight, ChevronRight, ExternalLink } from "lucide-react";
 
-// IT guide.
-// This currently duplicates the supplied IT guide exactly.
-// Replace the text/links in THIS file when you are ready to customise IT.
+// Science & Tech resource guide.
 export default function GuideContent({
   FadeUp,
   VideoEmbed,
@@ -61,7 +59,7 @@ export default function GuideContent({
                   <span className="rg-step-num">Step 02</span>
                   <div className="rg-step-body">
                     Once you’ve shared those details, use this prompt:<span style={{display: 'none'}}>[cite: 9]</span>
-                    <blockquote>“Suggest me project ideas that I can do online, which will help me land a job in the specific location and job titles I mentioned earlier.”<span style={{display: 'none'}}>[cite: 10]</span></blockquote>
+                    <blockquote>“Suggest me passion project ideas I can do to build my portfolio targeting Science, Research, Laboratory, R&D or Technical jobs in [city/state], Australia. The projects should show I understand Australian industry practices, local conditions, research methods and the technical requirements of my field.”<span style={{display: 'none'}}>[cite: 10]</span></blockquote>
                   </div>
                 </div>
                 <div className="rg-step">
@@ -80,36 +78,72 @@ export default function GuideContent({
           <section className="rg-section">
             <FadeUp>
               <p className="rg-num">02 — Strategy</p>
-              <h2 className="rg-title">Networking Events<span style={{display: 'none'}}>[cite: 14]</span></h2>
-              <p className="rg-p">A Huge Mistake, migrants make is staying in their own circles after coming to Australia. <strong className="rg-accent">Don’t be that guy!</strong><span style={{display: 'none'}}>[cite: 14]</span></p>
-              <p className="rg-p">Go to as many IT networking events as possible, talk to more aussies in the IT Industry, because referrals can help you to land jobs much faster (Referrals can almost guarantee you interviews if your CV is good)<span style={{display: 'none'}}>[cite: 14]</span></p>
+              <h2 className="rg-title">Networking Events</h2>
+
+              <p className="rg-p">
+                A Huge Mistake migrants make is staying in their own circles after coming to Australia.{" "}
+                <strong className="rg-accent">Don’t be that guy!</strong>
+              </p>
+
+              <p className="rg-p">
+                Go to science, research, laboratory, engineering, technology and innovation events
+                in your target city. These are useful places to meet researchers, scientists,
+                technical specialists, industry professionals and hiring managers already working
+                in Australia.
+              </p>
 
               <div className="rg-callout">
-                <p className="rg-p">Here are 2 main websites you can check to find IT Networking Oppurtunities<span style={{display: 'none'}}>[cite: 15]</span></p>
-              </div>
-
-              <div className="rg-video-grid">
-                <div className="rg-video-col">
-                  <a href="https://www.meetup.com" target="_blank" rel="noreferrer" className="rg-video-label" style={{textDecoration: 'none', color: 'inherit'}}>Meetup.com<span style={{display: 'none'}}>[cite: 16]</span></a>
-                  <VideoEmbed src="https://player.vimeo.com/video/1190741312?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479" title="Meetup" />
-                </div>
-                <div className="rg-video-col">
-                  <a href="https://lu.ma" target="_blank" rel="noreferrer" className="rg-video-label" style={{textDecoration: 'none', color: 'inherit'}}>Luma Events<span style={{display: 'none'}}>[cite: 16]</span></a>
-                  <VideoEmbed src="https://player.vimeo.com/video/1190465027?badge=0&autopause=0&player_id=0&app_id=58479" title="Luma Events" />
-                </div>
+                <p className="rg-p">
+                  Here are 3 useful places to keep checking for Science &amp; Tech networking opportunities.
+                </p>
               </div>
 
               <div className="rg-link-list">
-                <p className="rg-video-label" style={{ textAlign: "left", marginTop: 20 }}>Other Platforms you can check<span style={{display: 'none'}}>[cite: 18]</span></p>
-                <a href="https://www.eventbrite.com.au/" target="_blank" rel="noreferrer" className="rg-link-item">
-                  <div className="rg-link-item-left"><span className="rg-link-item-num">01</span> Eventbrite Australia</div>
+                <a
+                  href="https://www.meetup.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rg-link-item"
+                >
+                  <div className="rg-link-item-left">
+                    <span className="rg-link-item-num">01</span>
+                    Meetup
+                  </div>
                   <ExternalLink size={20} opacity={0.3} />
                 </a>
-                <a href="https://www.acs.org.au/" target="_blank" rel="noreferrer" className="rg-link-item">
-                  <div className="rg-link-item-left"><span className="rg-link-item-num">02</span> ACS</div>
+
+                <a
+                  href="https://www.eventbrite.com.au/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rg-link-item"
+                >
+                  <div className="rg-link-item-left">
+                    <span className="rg-link-item-num">02</span>
+                    Eventbrite Australia
+                  </div>
+                  <ExternalLink size={20} opacity={0.3} />
+                </a>
+
+                <a
+                  href="https://www.allconferencealert.com/australia/electrical"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rg-link-item"
+                >
+                  <div className="rg-link-item-left">
+                    <span className="rg-link-item-num">03</span>
+                    All Conference Alert
+                  </div>
                   <ExternalLink size={20} opacity={0.3} />
                 </a>
               </div>
+
+              <p className="rg-p">
+                Tip: Search for terms related to your exact field — laboratory science,
+                biotechnology, environmental science, chemistry, research, engineering,
+                innovation or technical conferences — instead of only searching for “job fairs”.
+              </p>
             </FadeUp>
           </section>
 
@@ -117,81 +151,99 @@ export default function GuideContent({
           <section className="rg-section">
             <FadeUp>
               <p className="rg-num">03 — Strategy</p>
-              <h2 className="rg-title">Online Courses & Certifications<span style={{display: 'none'}}>[cite: 19]</span></h2>
-              <p className="rg-p" style={{ fontWeight: 500 }}>You have 3 Options<span style={{display: 'none'}}>[cite: 19]</span></p>
+              <h2 className="rg-title">Online Courses &amp; Certifications</h2>
 
-              <div className="rg-options">
-                <div className="rg-option">
-                  <span className="rg-option-num">1</span>
-                  <p className="rg-option-text">Do Courses directly from Aussie Univeristies/Institutes - Expensive though :(<span style={{display: 'none'}}>[cite: 19]</span></p>
-                </div>
-                <div className="rg-option">
-                  <span className="rg-option-num">2</span>
-                  <p className="rg-option-text">Do Courses from online course sites like LinkedIn Learning, Alison - No courses from Australian universities though :(<span style={{display: 'none'}}>[cite: 20]</span></p>
-                </div>
-                <div className="rg-option active">
-                  <span className="rg-option-num">3</span>
-                  <div>
-                    <p className="rg-p" style={{ marginBottom: 12, opacity: 0.8 }}>Or 3rd option - which is the best:<span style={{display: 'none'}}>[cite: 20]</span></p>
-                    <p className="rg-p"><strong>Do Courses from Coursera but offered by Australian Universities</strong><span style={{display: 'none'}}>[cite: 20]</span> <br/><span className="rg-accent" style={{ display: 'inline-block', marginTop: 8 }}>We recommend Macquarie University (Sydney)</span><span style={{display: 'none'}}>[cite: 20]</span></p>
-                  </div>
-                </div>
+              <p className="rg-p">
+                For Science &amp; Tech roles, avoid collecting random certificates.
+                Pick courses that strengthen your scientific knowledge, research methodology,
+                experimentation, technical communication or the specialist area you want to work in.
+              </p>
+
+              <div className="rg-callout">
+                <p className="rg-p">
+                  A useful combination is an <strong className="rg-accent">Australian course provider</strong>
+                  plus a recognised global learning platform such as Coursera.
+                </p>
               </div>
 
-              {/* BA Category */}
               <div className="rg-course-category">
-                <p className="rg-course-category-title">If you are into BA/Data Analyst Roles:<span style={{display: 'none'}}>[cite: 21]</span></p>
-                <a href="https://www.coursera.org/learn/business-intelligence-data-analytics" target="_blank" rel="noreferrer" className="rg-course-item">
-                  <ArrowRight size={20} className="rg-course-icon" /> Business intelligence and data analytics: Generate insights<span style={{display: 'none'}}>[cite: 29]</span>
-                </a>
-                <a href="https://www.coursera.org/specializations/excel-data-analytics-visualization" target="_blank" rel="noreferrer" className="rg-course-item">
-                  <ArrowRight size={20} className="rg-course-icon" /> Excel Skills for Data Analytics and Visualization Specialization<span style={{display: 'none'}}>[cite: 30]</span>
-                </a>
-                <a href="https://www.coursera.org/learn/excel-data-analysis-fundamentals" target="_blank" rel="noreferrer" className="rg-course-item">
-                  <ArrowRight size={20} className="rg-course-icon" /> Excel Fundamentals for Data Analysis<span style={{display: 'none'}}>[cite: 31]</span>
-                </a>
-                <a href="https://www.coursera.org/learn/excel-power-tools" target="_blank" rel="noreferrer" className="rg-course-item">
-                  <ArrowRight size={20} className="rg-course-icon" /> Excel Power Tools for Data Analysis<span style={{display: 'none'}}>[cite: 32]</span>
+                <p className="rg-course-category-title">Learning Cloud — Science Courses</p>
+
+                <p className="rg-p">
+                  Learning Cloud is an Australian online education provider with science-focused
+                  study options. Browse the catalogue and choose a course that matches your
+                  target discipline rather than taking a generic course just for the certificate.
+                </p>
+
+                <a
+                  href="https://learningcloud.com.au/science-courses"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rg-course-item"
+                >
+                  <ArrowRight size={20} className="rg-course-icon" />
+                  Browse Learning Cloud Science Courses
                 </a>
               </div>
 
-              {/* Cyber Category */}
               <div className="rg-course-category">
-                <p className="rg-course-category-title">If you are into CyberSecurity Roles:<span style={{display: 'none'}}>[cite: 21]</span></p>
-                <a href="https://www.coursera.org/learn/cyber-security-essentials" target="_blank" rel="noreferrer" className="rg-course-item">
-                  <ArrowRight size={20} className="rg-course-icon" /> Cyber Security: Essentials<span style={{display: 'none'}}>[cite: 42]</span>
+                <p className="rg-course-category-title">Coursera — Research Methods</p>
+
+                <p className="rg-p">
+                  Research-method skills are useful across many science and technical roles,
+                  particularly if you are targeting research assistant, laboratory, university,
+                  R&amp;D or evidence-based technical positions.
+                </p>
+
+                <a
+                  href="https://www.coursera.org/learn/research-methods"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rg-course-item"
+                >
+                  <ArrowRight size={20} className="rg-course-icon" />
+                  Understanding Research Methods — University of London
                 </a>
-                <a href="https://www.coursera.org/learn/cyber-security-essentials-workplace" target="_blank" rel="noreferrer" className="rg-course-item">
-                  <ArrowRight size={20} className="rg-course-icon" /> Cyber Security: Essentials for Workplace<span style={{display: 'none'}}>[cite: 43]</span>
-                </a>
-                <a href="https://www.coursera.org/learn/cyber-security-digital-forensics" target="_blank" rel="noreferrer" className="rg-course-item">
-                  <ArrowRight size={20} className="rg-course-icon" /> Cyber Security: Digital Forensics<span style={{display: 'none'}}>[cite: 45]</span>
-                </a>
-                <a href="https://www.coursera.org/learn/cyber-security-applied-cryptography" target="_blank" rel="noreferrer" className="rg-course-item">
-                  <ArrowRight size={20} className="rg-course-icon" /> Cyber Security: Applied Cryptography<span style={{display: 'none'}}>[cite: 46]</span>
+
+                <a
+                  href="https://www.coursera.org/browse/physical-science-and-engineering/research-methods"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rg-course-item"
+                >
+                  <ArrowRight size={20} className="rg-course-icon" />
+                  Browse Research Methods Courses
                 </a>
               </div>
 
-              {/* AI Category */}
               <div className="rg-course-category">
-                <p className="rg-course-category-title">AI / Machine Learning & AI Security<span style={{display: 'none'}}>[cite: 62]</span></p>
-                <a href="https://www.coursera.org/learn/cyber-security-application-of-ai" target="_blank" rel="noreferrer" className="rg-course-item">
-                  <ArrowRight size={20} className="rg-course-icon" /> Cyber Security: Application of AI<span style={{display: 'none'}}>[cite: 63]</span>
-                </a>
-                <a href="https://www.coursera.org/learn/mq-csa-ai-for-cyber-security" target="_blank" rel="noreferrer" className="rg-course-item">
-                  <ArrowRight size={20} className="rg-course-icon" /> AI for Cyber Security<span style={{display: 'none'}}>[cite: 64]</span>
-                </a>
-                <a href="https://www.coursera.org/learn/cyber-security-security-ai" target="_blank" rel="noreferrer" className="rg-course-item">
-                  <ArrowRight size={20} className="rg-course-icon" /> Cyber Security: Security of AI<span style={{display: 'none'}}>[cite: 65]</span>
-                </a>
-                <a href="https://www.coursera.org/specializations/cyber-security-essentials-for-ai" target="_blank" rel="noreferrer" className="rg-course-item">
-                  <ArrowRight size={20} className="rg-course-icon" /> Cyber Security: Essentials for AI Specialization<span style={{display: 'none'}}>[cite: 66]</span>
+                <p className="rg-course-category-title">Coursera — Life &amp; Basic Sciences</p>
+
+                <p className="rg-p">
+                  If your background is in biology, biotechnology, medical science,
+                  genetics, environmental science or another life-science area,
+                  browse Coursera&apos;s science catalogue for discipline-specific learning.
+                </p>
+
+                <a
+                  href="https://www.coursera.org/browse/health/basic-science"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rg-course-item"
+                >
+                  <ArrowRight size={20} className="rg-course-icon" />
+                  Browse Life &amp; Basic Science Courses
                 </a>
               </div>
 
-              <a href="https://www.coursera.org/partners/macquarie" target="_blank" rel="noreferrer" style={{ fontSize: 14, color: "var(--gold)", textTransform: "uppercase", letterSpacing: "0.15em", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 10, marginTop: 24, fontWeight: 700 }}>
-                View all Macquarie courses <ExternalLink size={16} />
-              </a>
+              <div className="rg-callout">
+                <p className="rg-p">
+                  <strong className="rg-accent">How to choose:</strong> If you are targeting research
+                  or R&amp;D roles, start with research methods. If you are targeting laboratory
+                  or specialist science positions, choose a course directly related to your discipline.
+                  The goal is to make your CV look more relevant to the exact role — not simply more crowded.
+                </p>
+              </div>
             </FadeUp>
           </section>
 
@@ -199,30 +251,61 @@ export default function GuideContent({
           <section className="rg-section">
             <FadeUp>
               <p className="rg-num">04 — Strategy</p>
-              <h2 className="rg-title">Volunteering<span style={{display: 'none'}}>[cite: 21]</span></h2>
-              <p className="rg-p">Yes, Volunteering!<span style={{display: 'none'}}>[cite: 21]</span> Aussie recruiters say they love migrants who have done volunteering because it shows that you are actively contributing to Australian communities.<span style={{display: 'none'}}>[cite: 22]</span></p>
-              <p className="rg-p">We recently had multiple clients like you, who got IT volunteer roles related to SE, QA & BA, Also the best part is that recruiters will think that you are a nice person 😉<span style={{display: 'none'}}>[cite: 22]</span></p>
+              <h2 className="rg-title">Volunteering</h2>
 
-              <p className="rg-video-label" style={{ marginTop: 64 }}>Watch this first</p>
-              <VideoEmbed src="https://player.vimeo.com/video/1209435820?badge=0&autopause=0&player_id=0&app_id=58479" title="Best Website to find Volunteering Roles in Australia if you don't have local job experience" />
+              <p className="rg-p">
+                Yes, Volunteering! Australian volunteering can help you build local connections,
+                demonstrate community involvement and give recruiters something current to ask you about.
+              </p>
+
+              <p className="rg-p">
+                For Science &amp; Tech candidates, look for opportunities connected to engineering,
+                STEM, sustainability, environment, community projects, research support,
+                education or technical volunteering where possible.
+              </p>
+
+              <p className="rg-video-label" style={{ marginTop: 64 }}>
+                Start with SEEK Volunteer
+              </p>
+
+              <VideoEmbed
+                src="https://player.vimeo.com/video/1209435820?badge=0&autopause=0&player_id=0&app_id=58479"
+                title="Best Website to find Volunteering Roles in Australia if you don't have local job experience"
+              />
 
               <div className="rg-link-list">
-                <p className="rg-video-label" style={{ textAlign: "left", marginTop: 20 }}>There are 2 Main Volunteer Sites:<span style={{display: 'none'}}>[cite: 22]</span></p>
-                <a href="https://www.seekvolunteer.com.au/" target="_blank" rel="noreferrer" className="rg-link-item">
-                  <div className="rg-link-item-left"><span className="rg-link-item-num">1</span> Seek Volunteer<span style={{display: 'none'}}>[cite: 23]</span></div>
+                <a
+                  href="https://www.seekvolunteer.com.au/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rg-link-item"
+                >
+                  <div className="rg-link-item-left">
+                    <span className="rg-link-item-num">01</span>
+                    SEEK Volunteer
+                  </div>
                   <ExternalLink size={20} opacity={0.3} />
                 </a>
-                <a href="https://govolunteer.com.au/" target="_blank" rel="noreferrer" className="rg-link-item">
-                  <div className="rg-link-item-left"><span className="rg-link-item-num">2</span> GoVolunteer<span style={{display: 'none'}}>[cite: 23]</span></div>
+
+                <a
+                  href="https://ewb.org.au/volunteer/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rg-link-item"
+                >
+                  <div className="rg-link-item-left">
+                    <span className="rg-link-item-num">02</span>
+                    Engineers Without Borders Australia
+                  </div>
                   <ExternalLink size={20} opacity={0.3} />
                 </a>
               </div>
 
-              <p className="rg-p">Both of the sites have volunteering opportunities from one time ones to long term projects.<span style={{display: 'none'}}>[cite: 23]</span> But you can also find opportunities relevant to IT here :)<span style={{display: 'none'}}>[cite: 23]</span></p>
-
-              <div className="rg-callout">
-                <p className="rg-p">Now click here and don’t forget to select <strong className="rg-accent">“IT & Web Development”</strong> under “Type of work”<span style={{display: 'none'}}>[cite: 24]</span></p>
-              </div>
+              <p className="rg-p">
+                On SEEK Volunteer, try search terms such as science, STEM, environment,
+                sustainability, research, laboratory, engineering and education to find
+                opportunities closer to your background.
+              </p>
             </FadeUp>
           </section>
 
